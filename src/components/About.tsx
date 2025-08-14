@@ -1,107 +1,167 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Users, Target, Eye } from "lucide-react";
-
-const achievements = [
-  "50,000+ Active Members Nationwide",
-  "25+ Years of Professional Excellence", 
-  "Recognition from Government Bodies",
-  "Pan-India Presence in All States",
-  "Continuous Professional Development Programs",
-  "Strong Industry Partnerships"
-];
+import { Users, Target, Award, Heart, Calendar, MapPin, BookOpen, Scale } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-24 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content Side */}
-          <div>
-            <Badge className="badge-professional mb-4">
-              About AIFTP
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Leading India's
-              <span className="heading-gradient block">Tax Professionals</span>
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              The All India Federation of Tax Practitioners (AIFTP) stands as the premier 
-              association uniting Advocates, Chartered Accountants, and Tax Practitioners 
-              across India. We are committed to advancing professional standards, providing 
-              continuous education, and representing our members' interests at the highest levels.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Our mission extends beyond mere representation – we actively shape tax policy, 
-              ensure ethical practice standards, and provide our members with the tools and 
-              knowledge necessary to excel in an ever-evolving regulatory landscape.
-            </p>
+        <div className="text-center mb-20">
+          <Badge className="bg-primary/10 text-primary border border-primary/20 mb-6 text-base px-6 py-3">
+            <Calendar className="w-4 h-4 mr-2" />
+            Our Rich Heritage Since 1976
+          </Badge>
+          <h2 className="text-5xl md:text-6xl font-bold mb-8">
+            About <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AIFTP</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Born from the vision to unite tax practitioners across India, AIFTP was conceived by eminent professionals 
+            who believed in the power of shared knowledge and collective growth.
+          </p>
+        </div>
 
-            {/* Achievements */}
-            <div className="space-y-3 mb-8">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-success shrink-0" />
-                  <span className="text-foreground font-medium">{achievement}</span>
+        {/* Historical Foundation */}
+        <div className="mb-20">
+          <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-3xl p-10 md:p-16 border border-primary/10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl font-bold mb-6 text-primary">The Foundation Story</h3>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  On November 11, 1976, at the National Conference organized by The Chamber of Income Tax Consultants, Mumbai, 
+                  distinguished professionals christened AIFTP in the presence of former Chief Justice of India, Hon'ble Justice J. C. Shah.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  With the blessings of Padma Vibhushan Dr. N. A. Palkhivala and Shri Ram Rao Adik, 
+                  Shri N. C. Mehta became the Founder President, establishing what would become India's premier tax practitioners' federation.
+                </p>
+              </div>
+              <div className="space-y-6">
+                <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div className="text-3xl font-bold text-primary mb-2">1976</div>
+                  <div className="text-muted-foreground">Foundation Year</div>
                 </div>
-              ))}
+                <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div className="text-3xl font-bold text-accent mb-2">48+</div>
+                  <div className="text-muted-foreground">Years of Service</div>
+                </div>
+                <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div className="text-3xl font-bold text-primary mb-2">Mumbai</div>
+                  <div className="text-muted-foreground">Registered HQ</div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <Button className="btn-professional text-lg px-8 py-3">
-              Learn More About Us
-            </Button>
+        {/* Core Values Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 hover:shadow-lg transition-all duration-300">
+            <CardContent className="p-8 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Professional Unity</h3>
+              <p className="text-muted-foreground">
+                Bringing together Advocates, CAs, and Tax Practitioners from all states.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-to-br from-accent/5 to-accent/10 border border-accent/20 hover:shadow-lg transition-all duration-300">
+            <CardContent className="p-8 text-center">
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <BookOpen className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Education Focus</h3>
+              <p className="text-muted-foreground">
+                Spreading education in taxation laws, other laws, and accountancy.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 hover:shadow-lg transition-all duration-300">
+            <CardContent className="p-8 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Scale className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Legal Advocacy</h3>
+              <p className="text-muted-foreground">
+                37+ Public Interest Petitions filed for better tax administration.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-to-br from-accent/5 to-accent/10 border border-accent/20 hover:shadow-lg transition-all duration-300">
+            <CardContent className="p-8 text-center">
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Heart className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Welfare Support</h3>
+              <p className="text-muted-foreground">
+                ₹1 Crore corpus fund for member welfare and pandemic support.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Leadership & Structure */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+          <div className="bg-gradient-to-br from-primary to-primary-hover text-white rounded-3xl p-10">
+            <h3 className="text-3xl font-bold mb-6 flex items-center">
+              <Award className="w-8 h-8 mr-3" />
+              Current Leadership
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <div className="text-lg font-semibold text-accent">National President (2025)</div>
+                <div className="text-white/90">Mr. Samir S. Jani, Advocate, Junagadh</div>
+              </div>
+              <div>
+                <div className="text-lg font-semibold text-accent">Deputy President</div>
+                <div className="text-white/90">CA. S. Venkataramani, Bengaluru</div>
+              </div>
+              <div className="mt-6 text-white/80">
+                75 National Executive Committee Members across 5 zones
+              </div>
+            </div>
           </div>
 
-          {/* Cards Side */}
-          <div className="space-y-6">
-            {/* Mission Card */}
-            <Card className="card-professional">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <Target className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold">Our Mission</h3>
-                </div>
-                <p className="text-muted-foreground">
-                  To empower tax professionals with knowledge, resources, and representation 
-                  while maintaining the highest standards of professional excellence and ethics.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="bg-gradient-to-br from-accent to-accent-hover text-accent-foreground rounded-3xl p-10">
+            <h3 className="text-3xl font-bold mb-6 flex items-center">
+              <MapPin className="w-8 h-8 mr-3" />
+              National Presence
+            </h3>
+            <div className="grid grid-cols-2 gap-6">
+              <div>
+                <div className="text-2xl font-bold mb-2">5 Zones</div>
+                <div className="text-sm opacity-80">Central, Eastern, Northern, Southern, Western</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold mb-2">146</div>
+                <div className="text-sm opacity-80">Professional Associations</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold mb-2">29 States</div>
+                <div className="text-sm opacity-80">Plus 4 Union Territories</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold mb-2">11,000+</div>
+                <div className="text-sm opacity-80">Life Members</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            {/* Vision Card */}
-            <Card className="card-professional">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="bg-accent/10 p-3 rounded-lg">
-                    <Eye className="w-6 h-6 text-accent" />
-                  </div>
-                  <h3 className="text-xl font-semibold">Our Vision</h3>
-                </div>
-                <p className="text-muted-foreground">
-                  To be India's most trusted and influential association of tax practitioners, 
-                  driving innovation and excellence in tax practice and policy.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Community Card */}
-            <Card className="card-professional">
-              <CardContent className="p-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="bg-gradient-primary p-3 rounded-lg">
-                    <Users className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-xl font-semibold">Our Community</h3>
-                </div>
-                <p className="text-muted-foreground">
-                  A vibrant network of professionals supporting each other through knowledge 
-                  sharing, mentorship, and collaborative problem-solving.
-                </p>
-              </CardContent>
-            </Card>
+        {/* Mission Statement */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-3xl p-12 border border-primary/20">
+            <h3 className="text-3xl font-bold mb-6 text-primary">Our Mission</h3>
+            <p className="text-xl leading-relaxed max-w-5xl mx-auto text-muted-foreground">
+              To spread education in matters relating to tax laws, other laws and accountancy, while fostering 
+              professional excellence and national integration among tax practitioners across India. We believe in 
+              professional brotherhood and serve as the symbol of unity for India's tax professional community.
+            </p>
           </div>
         </div>
       </div>
