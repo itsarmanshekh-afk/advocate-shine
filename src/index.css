@@ -2,41 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Professional Association Design System - Modern & Trustworthy
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
+    /* Core Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 15% 15%;
 
+    /* Professional Blue Primary */
+    --primary: 210 100% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 100% 20%;
+    
+    /* Professional Gold Accent */  
+    --accent: 40 95% 55%;
+    --accent-foreground: 220 15% 15%;
+    --accent-hover: 40 95% 50%;
+
+    /* Card & Surface Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Secondary Colors */
+    --secondary: 210 20% 95%;
+    --secondary-foreground: 220 15% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Muted Colors */
+    --muted: 210 20% 95%;
+    --muted-foreground: 220 10% 45%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Status Colors */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Borders & Inputs */
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 100% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Modern Design Properties */
+    --radius: 0.75rem;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(210 100% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 25%) 0%, hsl(220 100% 30%) 50%, hsl(230 100% 35%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(45 95% 60%));
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +122,43 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Professional Button Variants */
+  .btn-professional {
+    @apply bg-gradient-to-r from-primary to-primary-hover text-primary-foreground 
+           shadow-lg hover:shadow-xl transition-all duration-300 
+           font-semibold tracking-wide;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-to-r from-accent to-accent-hover text-accent-foreground 
+           shadow-lg hover:shadow-xl transition-all duration-300 
+           font-semibold tracking-wide;
+  }
+
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Card Enhancements */
+  .card-professional {
+    @apply bg-card border border-border/50 shadow-lg hover:shadow-xl 
+           transition-all duration-300 backdrop-blur-sm;
+  }
+  
+  /* Typography Enhancements */
+  .heading-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  /* Professional Badge */
+  .badge-professional {
+    @apply bg-primary/10 text-primary border border-primary/20 
+           font-medium tracking-wide;
   }
 }
