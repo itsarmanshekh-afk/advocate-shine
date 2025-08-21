@@ -2,40 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Modern Tech-Inspired Design System - Cool & Vibrant
+/* Sophisticated Dark Design System - Elegant & Modern
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Core Brand Colors - Modern Cool Tones */
-    --background: 220 20% 98%;
-    --foreground: 220 20% 12%;
+    /* Core Brand Colors - Sophisticated Dark */
+    --background: 240 10% 8%;
+    --foreground: 0 0% 95%;
 
-    /* Vibrant Blue Primary */
-    --primary: 210 100% 55%;
+    /* Rich Navy Primary */
+    --primary: 220 70% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 210 100% 50%;
+    --primary-hover: 220 75% 50%;
     
-    /* Electric Teal Accent */  
-    --accent: 180 100% 45%;
-    --accent-foreground: 0 0% 100%;
-    --accent-hover: 180 100% 40%;
+    /* Warm Gold Accent */  
+    --accent: 35 100% 60%;
+    --accent-foreground: 240 10% 8%;
+    --accent-hover: 35 100% 55%;
 
-    /* Card & Surface Colors - Clean */
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 12%;
+    /* Card & Surface Colors - Dark Elegant */
+    --card: 240 8% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 12%;
+    --popover: 240 8% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Secondary Colors - Cool */
-    --secondary: 220 30% 96%;
-    --secondary-foreground: 220 20% 12%;
+    /* Secondary Colors - Dark Refined */
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    /* Muted Colors - Refined */
-    --muted: 220 25% 94%;
-    --muted-foreground: 220 15% 50%;
+    /* Muted Colors - Sophisticated */
+    --muted: 240 5% 18%;
+    --muted-foreground: 0 0% 70%;
 
     /* Status Colors */
     --destructive: 0 75% 55%;
@@ -43,21 +43,21 @@ All colors MUST be HSL.
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
 
-    /* Borders & Inputs - Modern */
-    --border: 220 25% 88%;
-    --input: 220 25% 92%;
-    --ring: 210 100% 55%;
+    /* Borders & Inputs - Dark Theme */
+    --border: 240 8% 20%;
+    --input: 240 8% 18%;
+    --ring: 220 70% 55%;
 
-    /* Modern Design Properties */
+    /* Elegant Design Properties */
     --radius: 0.75rem;
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-    --shadow: 0 4px 12px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 30px -10px rgb(0 0 0 / 0.15);
+    --shadow-sm: 0 2px 4px 0 rgb(0 0 0 / 0.3);
+    --shadow: 0 8px 16px -4px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 20px 40px -12px rgb(0 0 0 / 0.5);
     
-    /* Cool Modern Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(210 100% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 55%) 0%, hsl(180 100% 45%) 50%, hsl(200 100% 50%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(180 100% 50%));
+    /* Sophisticated Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(220 80% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 8%) 0%, hsl(240 8% 12%) 50%, hsl(240 6% 15%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(40 100% 65%));
 
     --sidebar-background: 0 0% 98%;
 
