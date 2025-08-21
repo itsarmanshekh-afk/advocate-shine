@@ -2,40 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Minimalistic Professional Design System - Modern & Aesthetic
+/* Modern Tech-Inspired Design System - Cool & Vibrant
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Core Brand Colors - Minimalistic */
-    --background: 0 0% 98%;
-    --foreground: 220 15% 15%;
+    /* Core Brand Colors - Modern Cool Tones */
+    --background: 220 20% 98%;
+    --foreground: 220 20% 12%;
 
-    /* Soft Modern Primary */
-    --primary: 220 15% 25%;
-    --primary-foreground: 0 0% 98%;
-    --primary-hover: 220 20% 20%;
+    /* Vibrant Blue Primary */
+    --primary: 210 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 100% 50%;
     
-    /* Elegant Purple Accent */  
-    --accent: 260 60% 65%;
-    --accent-foreground: 0 0% 98%;
-    --accent-hover: 260 65% 60%;
+    /* Electric Teal Accent */  
+    --accent: 180 100% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 180 100% 40%;
 
     /* Card & Surface Colors - Clean */
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 15%;
+    --card-foreground: 220 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 15%;
+    --popover-foreground: 220 20% 12%;
 
-    /* Secondary Colors - Subtle */
-    --secondary: 220 15% 96%;
-    --secondary-foreground: 220 15% 15%;
+    /* Secondary Colors - Cool */
+    --secondary: 220 30% 96%;
+    --secondary-foreground: 220 20% 12%;
 
     /* Muted Colors - Refined */
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 220 25% 94%;
+    --muted-foreground: 220 15% 50%;
 
     /* Status Colors */
     --destructive: 0 75% 55%;
@@ -43,21 +43,21 @@ All colors MUST be HSL.
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
 
-    /* Borders & Inputs - Minimal */
-    --border: 220 15% 88%;
-    --input: 220 15% 92%;
-    --ring: 260 60% 65%;
+    /* Borders & Inputs - Modern */
+    --border: 220 25% 88%;
+    --input: 220 25% 92%;
+    --ring: 210 100% 55%;
 
     /* Modern Design Properties */
-    --radius: 0.5rem;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03);
-    --shadow: 0 2px 8px -2px rgb(0 0 0 / 0.08);
-    --shadow-lg: 0 8px 25px -8px rgb(0 0 0 / 0.12);
+    --radius: 0.75rem;
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    --shadow: 0 4px 12px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 30px -10px rgb(0 0 0 / 0.15);
     
-    /* Minimalistic Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(220 20% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 15% 25%) 0%, hsl(260 25% 30%) 50%, hsl(260 40% 45%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(260 65% 70%));
+    /* Cool Modern Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(210 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 55%) 0%, hsl(180 100% 45%) 50%, hsl(200 100% 50%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(180 100% 50%));
 
     --sidebar-background: 0 0% 98%;
 
