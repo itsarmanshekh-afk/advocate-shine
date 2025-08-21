@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { 
   BookOpen, 
   Users, 
@@ -105,10 +106,14 @@ const services = [
 ];
 
 const Services = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: servicesRef, isVisible: servicesVisible } = useScrollAnimation();
+  const { ref: statsRef, isVisible: statsVisible } = useScrollAnimation();
+
   return (
     <section id="services" className="py-24 bg-gradient-to-b from-secondary/30 to-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
+        <div ref={headerRef} className={`text-center mb-20 transition-all duration-700 ${headerVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <Badge className="bg-accent/10 text-accent border border-accent/20 mb-6 text-base px-6 py-3">
             <Briefcase className="w-4 h-4 mr-2" />
             Comprehensive Services & Benefits
@@ -122,7 +127,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20">
+        <div ref={servicesRef} className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20 transition-all duration-700 ${servicesVisible ? 'animate-scale-in' : 'opacity-0 scale-95'}`}>
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-500 border-0 bg-gradient-to-br from-white to-gray-50/50 hover:scale-105">
               <CardHeader className="pb-4">
@@ -154,7 +159,7 @@ const Services = () => {
         </div>
 
         {/* Statistics Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+        <div ref={statsRef} className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 transition-all duration-700 ${statsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-primary/20">
             <div className="text-4xl font-bold text-primary mb-2">48+</div>
             <div className="text-muted-foreground">Years of Service</div>

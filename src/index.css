@@ -2,40 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Professional Association Design System - Modern & Trustworthy
+/* Minimalistic Professional Design System - Modern & Aesthetic
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 0 0% 100%;
+    /* Core Brand Colors - Minimalistic */
+    --background: 0 0% 98%;
     --foreground: 220 15% 15%;
 
-    /* Professional Blue Primary */
-    --primary: 210 100% 25%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 210 100% 20%;
+    /* Soft Modern Primary */
+    --primary: 220 15% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 220 20% 20%;
     
-    /* Professional Gold Accent */  
-    --accent: 40 95% 55%;
-    --accent-foreground: 220 15% 15%;
-    --accent-hover: 40 95% 50%;
+    /* Elegant Purple Accent */  
+    --accent: 260 60% 65%;
+    --accent-foreground: 0 0% 98%;
+    --accent-hover: 260 65% 60%;
 
-    /* Card & Surface Colors */
+    /* Card & Surface Colors - Clean */
     --card: 0 0% 100%;
     --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
 
-    /* Secondary Colors */
-    --secondary: 210 20% 95%;
+    /* Secondary Colors - Subtle */
+    --secondary: 220 15% 96%;
     --secondary-foreground: 220 15% 15%;
 
-    /* Muted Colors */
-    --muted: 210 20% 95%;
-    --muted-foreground: 220 10% 45%;
+    /* Muted Colors - Refined */
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 55%;
 
     /* Status Colors */
     --destructive: 0 75% 55%;
@@ -43,21 +43,21 @@ All colors MUST be HSL.
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
 
-    /* Borders & Inputs */
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 100% 25%;
+    /* Borders & Inputs - Minimal */
+    --border: 220 15% 88%;
+    --input: 220 15% 92%;
+    --ring: 260 60% 65%;
 
     /* Modern Design Properties */
-    --radius: 0.75rem;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --radius: 0.5rem;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+    --shadow: 0 2px 8px -2px rgb(0 0 0 / 0.08);
+    --shadow-lg: 0 8px 25px -8px rgb(0 0 0 / 0.12);
     
-    /* Professional Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(210 100% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 25%) 0%, hsl(220 100% 30%) 50%, hsl(230 100% 35%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(45 95% 60%));
+    /* Minimalistic Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(220 20% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 15% 25%) 0%, hsl(260 25% 30%) 50%, hsl(260 40% 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(260 65% 70%));
 
     --sidebar-background: 0 0% 98%;
 

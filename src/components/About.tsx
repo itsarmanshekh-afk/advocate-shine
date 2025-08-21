@@ -2,12 +2,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Target, Award, Heart, Calendar, MapPin, BookOpen, Scale } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const About = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: foundationRef, isVisible: foundationVisible } = useScrollAnimation();
+  const { ref: valuesRef, isVisible: valuesVisible } = useScrollAnimation();
+  const { ref: leadershipRef, isVisible: leadershipVisible } = useScrollAnimation();
+
   return (
     <section id="about" className="py-24 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
+        <div ref={headerRef} className={`text-center mb-20 transition-all duration-700 ${headerVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <Badge className="bg-primary/10 text-primary border border-primary/20 mb-6 text-base px-6 py-3">
             <Calendar className="w-4 h-4 mr-2" />
             Our Rich Heritage Since 1976
@@ -22,7 +28,7 @@ const About = () => {
         </div>
 
         {/* Historical Foundation */}
-        <div className="mb-20">
+        <div ref={foundationRef} className={`mb-20 transition-all duration-700 ${foundationVisible ? 'animate-fade-in-left' : 'opacity-0 -translate-x-8'}`}>
           <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-3xl p-10 md:p-16 border border-primary/10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -55,7 +61,7 @@ const About = () => {
         </div>
 
         {/* Core Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div ref={valuesRef} className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20 transition-all duration-700 ${valuesVisible ? 'animate-scale-in' : 'opacity-0 scale-95'}`}>
           <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 hover:shadow-lg transition-all duration-300">
             <CardContent className="p-8 text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -106,7 +112,7 @@ const About = () => {
         </div>
 
         {/* Leadership & Structure */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <div ref={leadershipRef} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 transition-all duration-700 ${leadershipVisible ? 'animate-fade-in-right' : 'opacity-0 translate-x-8'}`}>
           <div className="bg-gradient-to-br from-primary to-primary-hover text-white rounded-3xl p-10">
             <h3 className="text-3xl font-bold mb-6 flex items-center">
               <Award className="w-8 h-8 mr-3" />
