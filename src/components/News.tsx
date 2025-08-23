@@ -56,7 +56,7 @@ const News = () => {
         {/* News Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {newsItems.map((item, index) => (
-            <Card key={index} className="card-professional group">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-500 bg-card/50 backdrop-blur-sm border border-border/50 hover:bg-card/70 hover:border-border/70 hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <Badge variant="secondary" className="text-xs">

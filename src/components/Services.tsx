@@ -111,7 +111,7 @@ const Services = () => {
   const { ref: statsRef, isVisible: statsVisible } = useScrollAnimation();
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-secondary/30 to-background">
+    <section id="services" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div ref={headerRef} className={`text-center mb-20 transition-all duration-700 ${headerVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <Badge className="bg-accent/10 text-accent border border-accent/20 mb-6 text-base px-6 py-3">
@@ -129,7 +129,7 @@ const Services = () => {
 
         <div ref={servicesRef} className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20 transition-all duration-700 ${servicesVisible ? 'animate-scale-in' : 'opacity-0 scale-95'}`}>
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-500 border-0 bg-gradient-to-br from-white to-gray-50/50 hover:scale-105">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-500 bg-card/50 backdrop-blur-sm border border-border/50 hover:bg-card/70 hover:border-border/70 hover:scale-105">
               <CardHeader className="pb-4">
                 <div className="relative mb-4">
                   <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -180,8 +180,13 @@ const Services = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-primary via-primary-hover to-accent text-white rounded-3xl p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(-45deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+          <div 
+            className="bg-gradient-to-r from-primary via-primary-hover to-accent text-white rounded-3xl p-12 relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-hover)) 50%, hsl(var(--accent)) 100%), url("https://www.transparenttextures.com/patterns/billie-holiday.png")`,
+              backgroundBlendMode: "overlay",
+            }}
+          >
             <div className="relative z-10">
               <h3 className="text-4xl font-bold mb-6">Join the AIFTP Family</h3>
               <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">

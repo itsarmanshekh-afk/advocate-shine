@@ -20,7 +20,13 @@ const resources = [
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer 
+      className="text-primary-foreground"
+      style={{
+        backgroundImage: `var(--gradient-footer), var(--bg-texture)`,
+        backgroundBlendMode: "overlay",
+      }}
+    >
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">

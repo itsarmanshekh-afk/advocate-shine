@@ -111,28 +111,8 @@ const About = () => {
           </Card>
         </div>
 
-        {/* Leadership & Structure */}
-        <div ref={leadershipRef} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 transition-all duration-700 ${leadershipVisible ? 'animate-fade-in-right' : 'opacity-0 translate-x-8'}`}>
-          <div className="bg-gradient-to-br from-primary to-primary-hover text-white rounded-3xl p-10">
-            <h3 className="text-3xl font-bold mb-6 flex items-center">
-              <Award className="w-8 h-8 mr-3" />
-              Current Leadership
-            </h3>
-            <div className="space-y-4">
-              <div>
-                <div className="text-lg font-semibold text-accent">National President (2025)</div>
-                <div className="text-white/90">Mr. Samir S. Jani, Advocate, Junagadh</div>
-              </div>
-              <div>
-                <div className="text-lg font-semibold text-accent">Deputy President</div>
-                <div className="text-white/90">CA. S. Venkataramani, Bengaluru</div>
-              </div>
-              <div className="mt-6 text-white/80">
-                75 National Executive Committee Members across 5 zones
-              </div>
-            </div>
-          </div>
-
+        {/* Leadership & Structure - Simplified */}
+        <div ref={leadershipRef} className={`mb-20 transition-all duration-700 ${leadershipVisible ? 'animate-fade-in-right' : 'opacity-0 translate-x-8'}`}>
           <div className="bg-gradient-to-br from-accent to-accent-hover text-accent-foreground rounded-3xl p-10">
             <h3 className="text-3xl font-bold mb-6 flex items-center">
               <MapPin className="w-8 h-8 mr-3" />

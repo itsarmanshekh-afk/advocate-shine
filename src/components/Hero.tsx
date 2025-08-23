@@ -1,13 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Calendar, Sparkles, TrendingUp } from "lucide-react";
+import { ArrowRight, Sparkles, TrendingUp } from "lucide-react";
+import presidentImage from "@/assets/president-samir-jani.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Premium Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card"></div>
-      
+    <section 
+      id="home" 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden" 
+      style={{
+        backgroundImage: `var(--hero-gradient), var(--bg-texture)`,
+        backgroundBlendMode: "overlay",
+      }}
+    >
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -87,23 +92,36 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Leadership Card */}
-          <div className="pt-20 max-w-2xl mx-auto">
+          {/* President Leadership Card */}
+          <div className="pt-20 max-w-4xl mx-auto">
             <div className="bg-card/40 backdrop-blur-sm border border-border/40 rounded-3xl p-8 hover:bg-card/60 hover:border-border/60 transition-all duration-300">
-              <div className="flex items-center justify-center gap-2 mb-6">
+              <div className="flex items-center justify-center gap-2 mb-8">
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                <h3 className="text-lg font-semibold text-foreground">Current Leadership</h3>
+                <h3 className="text-2xl font-semibold text-foreground">Current Leadership</h3>
                 <div className="w-2 h-2 bg-accent rounded-full animate-pulse delay-500"></div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="text-center space-y-2">
-                  <div className="text-xl font-bold text-primary">Mr. Samir S. Jani</div>
-                  <div className="text-sm text-muted-foreground font-medium tracking-wide">National President</div>
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-80 h-80 rounded-2xl overflow-hidden border-4 border-primary/30 shadow-2xl">
+                  <img 
+                    src={presidentImage} 
+                    alt="Mr. Samir S. Jani - National President"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="text-center space-y-2">
-                  <div className="text-xl font-bold text-accent">CA. S. Venkataramani</div>
-                  <div className="text-sm text-muted-foreground font-medium tracking-wide">Deputy President</div>
+                <div className="flex-1 text-center md:text-left space-y-4">
+                  <div>
+                    <div className="text-3xl font-bold text-primary mb-2">Mr. Samir S. Jani</div>
+                    <div className="text-lg text-muted-foreground font-medium tracking-wide">National President (2025)</div>
+                    <div className="text-sm text-muted-foreground">Advocate, Junagadh</div>
+                  </div>
+                  <div className="bg-primary/10 rounded-2xl p-6 border border-primary/20">
+                    <p className="text-foreground leading-relaxed italic">
+                      "AIFTP stands as a beacon of professional excellence, uniting tax practitioners across India. 
+                      Our mission is to ensure that every member receives the support, knowledge, and representation 
+                      they deserve in their professional journey. Together, we build a stronger tax fraternity."
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
