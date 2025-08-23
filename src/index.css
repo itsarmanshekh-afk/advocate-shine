@@ -2,78 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Modern Design System - Eye-Catching & Aesthetic
-All colors MUST be HSL for perfect theming.
+/* Sophisticated Dark Design System - Elegant & Modern
+All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Core Brand Colors - Premium Dark */
-    --background: 240 12% 7%;
-    --foreground: 0 0% 98%;
+    /* Core Brand Colors - Sophisticated Dark */
+    --background: 240 10% 8%;
+    --foreground: 0 0% 95%;
 
-    /* Vibrant Blue Primary with Electric Accent */
-    --primary: 220 85% 65%;
+    /* Rich Navy Primary */
+    --primary: 220 70% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 220 90% 70%;
-    --primary-glow: 220 100% 75%;
+    --primary-hover: 220 75% 50%;
     
-    /* Electric Gold Accent */  
-    --accent: 45 100% 65%;
-    --accent-foreground: 240 12% 7%;
-    --accent-hover: 45 100% 70%;
-    --accent-glow: 45 100% 75%;
+    /* Warm Gold Accent */  
+    --accent: 35 100% 60%;
+    --accent-foreground: 240 10% 8%;
+    --accent-hover: 35 100% 55%;
 
-    /* Modern Card & Surface Colors */
-    --card: 240 10% 10%;
-    --card-foreground: 0 0% 98%;
-    --card-hover: 240 12% 12%;
+    /* Card & Surface Colors - Dark Elegant */
+    --card: 240 8% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 240 10% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 240 8% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Refined Secondary Colors */
-    --secondary: 240 8% 16%;
+    /* Secondary Colors - Dark Refined */
+    --secondary: 240 5% 15%;
     --secondary-foreground: 0 0% 95%;
 
-    /* Modern Muted Colors */
-    --muted: 240 6% 20%;
-    --muted-foreground: 0 0% 75%;
+    /* Muted Colors - Sophisticated */
+    --muted: 240 5% 18%;
+    --muted-foreground: 0 0% 70%;
 
-    /* Enhanced Status Colors */
-    --destructive: 0 85% 60%;
+    /* Status Colors */
+    --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
-    --success: 142 75% 50%;
+    --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
 
-    /* Premium Borders & Inputs */
-    --border: 240 10% 22%;
+    /* Borders & Inputs - Dark Theme */
+    --border: 240 8% 20%;
     --input: 240 8% 18%;
-    --ring: 220 85% 65%;
+    --ring: 220 70% 55%;
 
-    /* Modern Design Properties */
-    --radius: 1rem;
-    --shadow-sm: 0 2px 8px 0 rgb(0 0 0 / 0.4);
-    --shadow: 0 10px 25px -5px rgb(0 0 0 / 0.5);
-    --shadow-lg: 0 25px 50px -12px rgb(0 0 0 / 0.6);
-    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
-    --shadow-accent: 0 0 40px hsl(var(--accent) / 0.2);
+    /* Elegant Design Properties */
+    --radius: 0.75rem;
+    --shadow-sm: 0 2px 4px 0 rgb(0 0 0 / 0.3);
+    --shadow: 0 8px 16px -4px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 20px 40px -12px rgb(0 0 0 / 0.5);
     
-    /* Eye-Catching Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-glow)) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(240 15% 9%) 25%, hsl(240 12% 12%) 50%, hsl(240 10% 15%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--card-hover)) 100%);
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    /* Sophisticated Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(220 80% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 8%) 0%, hsl(240 8% 12%) 50%, hsl(240 6% 15%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(40 100% 65%));
     
-    /* Premium Background Effects */
+    /* Professional gradient background with texture */
     --bg-texture: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
-    --gradient-footer: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(240 15% 9%) 25%, hsl(var(--primary) / 0.1) 50%, hsl(var(--accent) / 0.1) 100%);
-    
-    /* Modern Glass Morphism */
-    --glass-bg: rgba(255, 255, 255, 0.08);
-    --glass-border: rgba(255, 255, 255, 0.12);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --hero-gradient: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(222.2 60% 6%) 50%, hsl(222.2 40% 8%) 100%);
+    --gradient-footer: linear-gradient(135deg, hsl(222.2 84% 4.9%) 0%, hsl(var(--primary) / 0.8) 50%, hsl(var(--accent) / 0.6) 100%);
 
     --sidebar-background: 0 0% 98%;
 
@@ -143,97 +132,38 @@ All colors MUST be HSL for perfect theming.
 }
 
 @layer components {
-  /* Premium Button Variants */
-  .btn-primary {
-    @apply bg-gradient-to-r from-primary via-primary-hover to-primary-glow 
-           text-primary-foreground shadow-lg hover:shadow-glow
-           transition-all duration-500 font-semibold tracking-wide
-           hover:scale-105 hover:-translate-y-0.5;
+  /* Professional Button Variants */
+  .btn-professional {
+    @apply bg-gradient-to-r from-primary to-primary-hover text-primary-foreground 
+           shadow-lg hover:shadow-xl transition-all duration-300 
+           font-semibold tracking-wide;
   }
   
   .btn-accent {
-    @apply bg-gradient-to-r from-accent via-accent-hover to-accent-glow 
-           text-accent-foreground shadow-lg hover:shadow-accent
-           transition-all duration-500 font-semibold tracking-wide
-           hover:scale-105 hover:-translate-y-0.5;
+    @apply bg-gradient-to-r from-accent to-accent-hover text-accent-foreground 
+           shadow-lg hover:shadow-xl transition-all duration-300 
+           font-semibold tracking-wide;
   }
 
-  .btn-glass {
-    @apply bg-glass-bg backdrop-blur-sm border border-glass-border
-           text-foreground hover:bg-white/10 hover:border-white/20
-           transition-all duration-300 font-medium;
-  }
-
-  /* Modern Hero Styles */
+  /* Hero Section Styles */
   .hero-gradient {
     background: var(--gradient-hero);
   }
   
-  /* Glass Morphism Cards */
-  .card-glass {
-    @apply bg-glass-bg backdrop-blur-md border border-glass-border 
-           shadow-lg hover:shadow-xl hover:bg-white/10 hover:border-white/15
-           transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1;
+  /* Card Enhancements */
+  .card-professional {
+    @apply bg-card border border-border/50 shadow-lg hover:shadow-xl 
+           transition-all duration-300 backdrop-blur-sm;
   }
   
-  .card-premium {
-    @apply bg-gradient-to-br from-card to-card-hover border border-border/50 
-           shadow-lg hover:shadow-xl hover:border-border/70
-           transition-all duration-500 backdrop-blur-sm
-           hover:scale-[1.03] hover:-translate-y-2;
-  }
-  
-  /* Modern Typography */
+  /* Typography Enhancements */
   .heading-gradient {
-    @apply bg-gradient-to-r from-primary via-primary-glow to-accent 
-           bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
   
-  .text-glow {
-    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
-  }
-  
-  /* Premium Badges */
-  .badge-glass {
-    @apply bg-glass-bg backdrop-blur-sm border border-glass-border 
-           text-foreground font-medium tracking-wide;
-  }
-  
-  /* Floating Animation */
-  .float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .float-delay {
-    animation: float 6s ease-in-out infinite;
-    animation-delay: -3s;
-  }
-  
-  /* Pulse Glow Effect */
-  .pulse-glow {
-    animation: pulse-glow 4s ease-in-out infinite;
-  }
-
-  /* Scroll Reveal Animations */
-  .reveal-up {
-    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
-  }
-  
-  .reveal-up.active {
-    @apply opacity-100 translate-y-0;
-  }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { 
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
-  }
-  50% { 
-    box-shadow: 0 0 40px hsl(var(--primary) / 0.6), 0 0 60px hsl(var(--accent) / 0.3);
+  /* Professional Badge */
+  .badge-professional {
+    @apply bg-primary/10 text-primary border border-primary/20 
+           font-medium tracking-wide;
   }
 }
