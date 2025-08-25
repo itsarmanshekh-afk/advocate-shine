@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Sparkles, TrendingUp } from "lucide-react";
-import presidentImage from "@/assets/president-samir-jani.jpg";
 
 const Hero = () => {
   return (
@@ -9,15 +8,25 @@ const Hero = () => {
       id="home" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden" 
       style={{
-        backgroundImage: `var(--hero-gradient), var(--bg-texture)`,
+        backgroundImage: `linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%), url("https://www.transparenttextures.com/patterns/billie-holiday.png")`,
         backgroundBlendMode: "overlay",
       }}
     >
-      {/* Floating Elements */}
+      {/* Enhanced Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/8 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/5 to-accent/5 rounded-full blur-3xl"></div>
+        <div className="floating-orb floating-orb-1"></div>
+        <div className="floating-orb floating-orb-2"></div>
+        <div className="floating-orb floating-orb-3"></div>
+        
+        {/* Animated Particles */}
+        <div className="absolute top-20 left-20 w-2 h-2 bg-primary/60 rounded-full animate-ping"></div>
+        <div className="absolute top-40 right-32 w-1 h-1 bg-accent/80 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-primary/40 rounded-full animate-bounce delay-1000"></div>
+        <div className="absolute bottom-20 right-20 w-2 h-2 bg-accent/60 rounded-full animate-ping delay-700"></div>
+        
+        {/* Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-accent/5 via-transparent to-primary/5"></div>
       </div>
 
       {/* Main Content */}
@@ -25,46 +34,46 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center space-y-16 animate-fade-in-up">
           
           {/* Hero Badge */}
-          <div className="inline-flex items-center gap-3 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full px-6 py-3 text-sm font-medium text-muted-foreground hover:border-primary/30 transition-all duration-300">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span>Established 1976 • 48 Years of Excellence</span>
+          <div className="badge-glow inline-flex items-center gap-3 rounded-full px-8 py-4 text-sm font-medium hover:scale-105 transition-all duration-300 animate-glow">
+            <Sparkles className="w-5 h-5 text-white animate-spin" />
+            <span className="text-white font-semibold">Established 1976 • 48 Years of Excellence</span>
           </div>
 
           {/* Main Title */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight">
-                <span className="block text-foreground">All India</span>
-                <span className="block bg-gradient-to-r from-primary via-primary-hover to-accent bg-clip-text text-transparent">
+              <h1 className="text-6xl md:text-8xl lg:text-10xl font-black tracking-tight">
+                <span className="block text-foreground text-glow animate-fade-in-up">All India</span>
+                <span className="block heading-gradient animate-shimmer text-glow animate-fade-in-up delay-300">
                   Federation
                 </span>
-                <span className="block text-foreground/90 text-5xl md:text-6xl lg:text-7xl mt-2">
+                <span className="block text-foreground/90 text-5xl md:text-6xl lg:text-8xl mt-4 animate-fade-in-up delay-500">
                   Tax Practitioners
                 </span>
               </h1>
             </div>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Empowering <span className="text-primary font-semibold">11,000+ professionals</span> across 
-              <span className="text-accent font-semibold"> 29 states</span> with unified advocacy, 
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-700">
+              Empowering <span className="text-primary font-bold text-glow">11,000+ professionals</span> across 
+              <span className="text-accent font-bold text-glow"> 29 states</span> with unified advocacy, 
               education, and welfare since 1976
             </p>
           </div>
 
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-12">
+          {/* Enhanced Stats Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-16 animate-scale-in delay-1000">
             {[
-              { number: "146", label: "Professional Bodies", color: "text-primary" },
-              { number: "11K+", label: "Life Members", color: "text-accent" },
-              { number: "29", label: "States Covered", color: "text-primary" },
-              { number: "37+", label: "PILs Filed", color: "text-accent" }
+              { number: "146", label: "Professional Bodies", color: "text-primary", bgColor: "from-primary/20 to-primary/5" },
+              { number: "11K+", label: "Life Members", color: "text-accent", bgColor: "from-accent/20 to-accent/5" },
+              { number: "29", label: "States Covered", color: "text-primary", bgColor: "from-primary/20 to-primary/5" },
+              { number: "37+", label: "PILs Filed", color: "text-accent", bgColor: "from-accent/20 to-accent/5" }
             ].map((stat, index) => (
               <div key={index} className="group">
-                <div className="bg-card/30 backdrop-blur-sm border border-border/30 rounded-2xl p-6 hover:bg-card/50 hover:border-border/50 transition-all duration-300 hover:scale-105">
-                  <div className={`text-4xl md:text-5xl font-black ${stat.color} mb-2 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`glass-card bg-gradient-to-br ${stat.bgColor} rounded-3xl p-8 hover:shadow-2xl animate-glow`}>
+                  <div className={`text-5xl md:text-6xl font-black ${stat.color} mb-3 group-hover:scale-125 transition-all duration-500 text-glow`}>
                     {stat.number}
                   </div>
-                  <div className="text-muted-foreground text-sm font-medium tracking-wide">
+                  <div className="text-white/90 text-sm font-semibold tracking-wide uppercase">
                     {stat.label}
                   </div>
                 </div>
@@ -72,60 +81,26 @@ const Hero = () => {
             ))}
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+          {/* Enhanced Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-12 animate-fade-in-up delay-1200">
             <Button 
               size="lg" 
-              className="text-base px-8 py-6 bg-gradient-to-r from-primary via-primary-hover to-primary text-primary-foreground font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105"
+              className="text-lg px-12 py-8 bg-gradient-to-r from-primary via-accent to-primary text-white font-bold rounded-full shadow-2xl hover:shadow-primary/20 transition-all duration-500 group hover:scale-110 animate-glow relative overflow-hidden"
             >
-              <span>Join AIFTP Family</span>
-              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+              <span className="relative z-10">Join AIFTP Family</span>
+              <ArrowRight className="ml-4 w-6 h-6 group-hover:translate-x-3 transition-transform duration-300 relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </Button>
             
             <Button 
               size="lg" 
-              variant="outline" 
-              className="text-base px-8 py-6 border-2 border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary rounded-full transition-all duration-300 backdrop-blur-sm"
+              className="btn-glass text-lg px-12 py-8 font-semibold rounded-full group hover:scale-105"
             >
-              <TrendingUp className="mr-3 w-5 h-5" />
+              <TrendingUp className="mr-4 w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
               <span>Explore Benefits</span>
             </Button>
           </div>
 
-          {/* President Leadership Card */}
-          <div className="pt-20 max-w-4xl mx-auto">
-            <div className="bg-card/40 backdrop-blur-sm border border-border/40 rounded-3xl p-8 hover:bg-card/60 hover:border-border/60 transition-all duration-300">
-              <div className="flex items-center justify-center gap-2 mb-8">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                <h3 className="text-2xl font-semibold text-foreground">Current Leadership</h3>
-                <div className="w-2 h-2 bg-accent rounded-full animate-pulse delay-500"></div>
-              </div>
-              
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="w-80 h-80 rounded-2xl overflow-hidden border-4 border-primary/30 shadow-2xl">
-                  <img 
-                    src={presidentImage} 
-                    alt="Mr. Samir S. Jani - National President"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex-1 text-center md:text-left space-y-4">
-                  <div>
-                    <div className="text-3xl font-bold text-primary mb-2">Mr. Samir S. Jani</div>
-                    <div className="text-lg text-muted-foreground font-medium tracking-wide">National President (2025)</div>
-                    <div className="text-sm text-muted-foreground">Advocate, Junagadh</div>
-                  </div>
-                  <div className="bg-primary/10 rounded-2xl p-6 border border-primary/20">
-                    <p className="text-foreground leading-relaxed italic">
-                      "AIFTP stands as a beacon of professional excellence, uniting tax practitioners across India. 
-                      Our mission is to ensure that every member receives the support, knowledge, and representation 
-                      they deserve in their professional journey. Together, we build a stronger tax fraternity."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
