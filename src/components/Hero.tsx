@@ -11,18 +11,21 @@ const Hero = () => {
     >
       {/* Modern Grid Background with Fade */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Large Grid Pattern with Fade Effect */}
+        {/* Checkerboard Grid Pattern with Fade Effect */}
         <div 
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: `
-              linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
-              linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px)
+              linear-gradient(45deg, hsl(var(--muted)) 25%, transparent 25%), 
+              linear-gradient(-45deg, hsl(var(--muted)) 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, hsl(var(--muted)) 75%), 
+              linear-gradient(-45deg, transparent 75%, hsl(var(--muted)) 75%)
             `,
             backgroundSize: '80px 80px',
+            backgroundPosition: '0 0, 0 40px, 40px -40px, -40px 0px',
             WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)',
             maskImage: 'radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)',
-            opacity: 0.6
+            opacity: 0.4
           }}
         />
         
