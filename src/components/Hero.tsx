@@ -21,8 +21,8 @@ const Hero = () => {
               linear-gradient(45deg, transparent 75%, hsl(var(--muted)) 75%), 
               linear-gradient(-45deg, transparent 75%, hsl(var(--muted)) 75%)
             `,
-            backgroundSize: '80px 80px',
-            backgroundPosition: '0 0, 0 40px, 40px -40px, -40px 0px',
+            backgroundSize: '140px 140px',
+            backgroundPosition: '0 0, 0 70px, 70px -70px, -70px 0px',
             WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)',
             maskImage: 'radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)',
             opacity: 0.4
