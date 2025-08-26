@@ -9,34 +9,28 @@ const Hero = () => {
       id="home" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background"
     >
-      {/* Modern Geometric Background Pattern */}
+      {/* Modern Grid Background with Fade */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.03]"
+        {/* Large Grid Pattern with Fade Effect */}
+        <div 
+          className="absolute inset-0 z-0"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+              linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+              linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px'
+            backgroundSize: '80px 80px',
+            WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)',
+            maskImage: 'radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)',
+            opacity: 0.6
           }}
         />
         
-        {/* Geometric Shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 border border-primary/10 rotate-45 animate-pulse"></div>
-        <div className="absolute top-40 right-40 w-24 h-24 bg-primary/5 rotate-12"></div>
-        <div className="absolute bottom-32 left-32 w-40 h-40 border border-accent/10 rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-28 h-28 bg-accent/5 rotate-45"></div>
-        
-        {/* Mask Image Overlay */}
-        <div 
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            maskImage: `radial-gradient(circle at 50% 50%, black 40%, transparent 70%)`,
-            WebkitMaskImage: `radial-gradient(circle at 50% 50%, black 40%, transparent 70%)`,
-            backgroundImage: `var(--bg-texture)`
-          }}
-        />
+        {/* Subtle Geometric Accents */}
+        <div className="absolute top-32 left-32 w-16 h-16 border border-primary/5 rotate-45"></div>
+        <div className="absolute top-48 right-48 w-12 h-12 bg-accent/3 rotate-12"></div>
+        <div className="absolute bottom-48 left-48 w-20 h-20 border border-primary/5 rounded-full"></div>
+        <div className="absolute bottom-32 right-32 w-14 h-14 bg-primary/3 rotate-45"></div>
       </div>
 
       {/* Main Content */}
