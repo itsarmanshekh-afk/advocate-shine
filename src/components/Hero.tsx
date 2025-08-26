@@ -16,10 +16,10 @@ const Hero = () => {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: `
-              linear-gradient(45deg, hsl(var(--muted)) 25%, transparent 25%), 
-              linear-gradient(-45deg, hsl(var(--muted)) 25%, transparent 25%), 
-              linear-gradient(45deg, transparent 75%, hsl(var(--muted)) 75%), 
-              linear-gradient(-45deg, transparent 75%, hsl(var(--muted)) 75%)
+              linear-gradient(45deg, #1a1a1a 25%, transparent 25%), 
+              linear-gradient(-45deg, #1a1a1a 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #1a1a1a 75%), 
+              linear-gradient(-45deg, transparent 75%, #1a1a1a 75%)
             `,
             backgroundSize: '140px 140px',
             backgroundPosition: '0 0, 0 70px, 70px -70px, -70px 0px',
