@@ -145,14 +145,14 @@ All colors MUST be HSL for perfect theming.
 @layer components {
   /* Premium Button Variants */
   .btn-primary {
-    @apply bg-gradient-to-r from-primary via-primary-hover to-primary-glow 
+    @apply bg-gradient-to-r from-primary to-primary 
            text-primary-foreground shadow-lg hover:shadow-glow
            transition-all duration-500 font-semibold tracking-wide
            hover:scale-105 hover:-translate-y-0.5;
   }
   
   .btn-accent {
-    @apply bg-gradient-to-r from-accent via-accent-hover to-accent 
+    @apply bg-gradient-to-r from-accent to-accent 
            text-accent-foreground shadow-lg hover:shadow-accent
            transition-all duration-500 font-semibold tracking-wide
            hover:scale-105 hover:-translate-y-0.5;
@@ -185,7 +185,7 @@ All colors MUST be HSL for perfect theming.
   
   /* Modern Typography */
   .heading-gradient {
-    @apply bg-gradient-to-r from-primary via-primary-glow to-accent 
+    @apply bg-gradient-to-r from-primary to-accent 
            bg-clip-text text-transparent;
   }
   
