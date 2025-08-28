@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import News from "@/components/News";
 import Footer from "@/components/Footer";
+import QuickLinks from "@/components/QuickLinks";
 
 const Index = () => {
   return (
@@ -11,9 +12,10 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <About />
+        {/* <About /> */}
         <Services />
         <News />
+        <QuickLinks />
       </main>
       <Footer />
     </div>

@@ -112,9 +112,9 @@ const About = () => {
         </div>
 
         {/* Leadership & Structure - Simplified */}
-        <div ref={leadershipRef} className={`mb-20 transition-all duration-700 ${leadershipVisible ? 'animate-fade-in-right' : 'opacity-0 translate-x-8'}`}>
+        <div ref={leadershipRef} className={` transition-all duration-700 ${leadershipVisible ? 'animate-fade-in-right' : 'opacity-0 translate-x-8'}`}>
           <div className="bg-gradient-to-br from-accent to-accent-hover text-accent-foreground rounded-3xl p-10">
-            <h3 className="text-3xl font-bold mb-6 flex items-center">
+            <h3 className="text-3xl font-bold mb-4 flex items-center">
               <MapPin className="w-8 h-8 mr-3" />
               National Presence
             </h3>
@@ -139,17 +139,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Mission Statement */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-3xl p-12 border border-primary/20">
-            <h3 className="text-3xl font-bold mb-6 text-primary">Our Mission</h3>
-            <p className="text-xl leading-relaxed max-w-5xl mx-auto text-muted-foreground">
-              To spread education in matters relating to tax laws, other laws and accountancy, while fostering 
-              professional excellence and national integration among tax practitioners across India. We believe in 
-              professional brotherhood and serve as the symbol of unity for India's tax professional community.
-            </p>
-          </div>
-        </div>
+
       </div>
     </section>
   );

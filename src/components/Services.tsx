@@ -21,7 +21,7 @@ import {
 const services = [
   {
     icon: BookOpen,
-    title: "Monthly Publications",
+    title: "Monthly Journal",
     description: "AIFTP Journal covering Supreme Court, High Court & ITAT decisions, plus quarterly digest of 33 tax magazines.",
     features: ["Monthly Tax Journal", "Indirect Tax Journal", "Case Law Digest", "Yearly Archives (2003+)"],
     highlight: "Premium Content"
@@ -61,13 +61,7 @@ const services = [
     features: ["48+ Publications", "Simple Language Format", "Q&A Style Books", "Affordable Pricing"],
     highlight: "48+ Books Published"
   },
-  {
-    icon: Users,
-    title: "National Integration",
-    description: "5 zonal divisions with 146 professional associations fostering brotherhood across 29 states.",
-    features: ["5 Zonal Divisions", "146 Member Associations", "29 States Coverage", "Professional Brotherhood"],
-    highlight: "National Unity"
-  },
+ 
   {
     icon: Shield,
     title: "Professional Ethics",
@@ -75,27 +69,9 @@ const services = [
     features: ["Ethical Guidelines", "Professional Standards", "Conduct Code", "Quality Assurance"],
     highlight: "Ethics First"
   },
-  {
-    icon: Heart,
-    title: "Welfare Support",
-    description: "₹1 Crore corpus fund for member welfare with financial aid during emergencies and pandemic support.",
-    features: ["₹1 Crore Corpus Fund", "Emergency Financial Aid", "Pandemic Support", "Group Insurance Plans"],
-    highlight: "₹1 Crore Fund"
-  },
-  {
-    icon: Trophy,
-    title: "Recognition Programs",
-    description: "Memorial awards sponsored by members in various categories including Best Conference, Best Zone achievements.",
-    features: ["Memorial Awards", "Best Conference Awards", "Zone Recognition", "Speaker Excellence"],
-    highlight: "Member Sponsored"
-  },
-  {
-    icon: GraduationCap,
-    title: "Educational Committees",
-    description: "Specialized committees for Journal, Law & Representation, ITAT coordination, and membership development.",
-    features: ["Journal Committee", "Law Representation", "ITAT Coordination", "Membership Development"],
-    highlight: "Specialized Focus"
-  },
+
+
+  
   {
     icon: Briefcase,
     title: "Digital Platform",
@@ -159,24 +135,7 @@ const Services = () => {
         </div>
 
         {/* Statistics Section */}
-        <div ref={statsRef} className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 transition-all duration-700 ${statsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
-          <div className="text-center bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-primary/20">
-            <div className="text-4xl font-bold text-primary mb-2">48+</div>
-            <div className="text-muted-foreground">Years of Service</div>
-          </div>
-          <div className="text-center bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl p-8 border border-accent/20">
-            <div className="text-4xl font-bold text-accent mb-2">200+</div>
-            <div className="text-muted-foreground">COVID Webinars</div>
-          </div>
-          <div className="text-center bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-primary/20">
-            <div className="text-4xl font-bold text-primary mb-2">37+</div>
-            <div className="text-muted-foreground">PILs Filed</div>
-          </div>
-          <div className="text-center bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl p-8 border border-accent/20">
-            <div className="text-4xl font-bold text-accent mb-2">₹11L</div>
-            <div className="text-muted-foreground">PM Cares Fund</div>
-          </div>
-        </div>
+    
 
         {/* Call to Action */}
         <div className="text-center">
@@ -199,7 +158,7 @@ const Services = () => {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full backdrop-blur-sm">
-                  Download Brochure
+                  Offline Application Form
                 </Button>
               </div>
             </div>
