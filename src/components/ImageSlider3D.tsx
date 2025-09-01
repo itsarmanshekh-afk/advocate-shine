@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import sliderConference from '@/assets/slider-conference.jpg';
+import sliderWorkshop from '@/assets/slider-workshop.jpg';
+import sliderAwards from '@/assets/slider-awards.jpg';
 
 interface SlideImage {
   src: string;
@@ -13,37 +16,25 @@ const ImageSlider3D = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
-  // Sample images - replace with actual images
+  // AIFTP Images
   const images: SlideImage[] = [
     {
-      src: "/api/placeholder/800/500",
+      src: sliderConference,
       alt: "AIFTP Conference 2024",
       caption: "Annual National Conference 2024",
       description: "Bringing together tax practitioners from across India"
     },
     {
-      src: "/api/placeholder/800/500", 
+      src: sliderWorkshop, 
       alt: "Tax Workshop",
       caption: "Professional Development Workshop",
       description: "Continuous learning and skill enhancement programs"
     },
     {
-      src: "/api/placeholder/800/500",
+      src: sliderAwards,
       alt: "Member Awards",
       caption: "Excellence Awards Ceremony", 
       description: "Recognizing outstanding contributions to the profession"
-    },
-    {
-      src: "/api/placeholder/800/500",
-      alt: "Legal Advocacy",
-      caption: "Legal Advocacy & PIL Filing",
-      description: "Fighting for practitioners' rights and professional interests"
-    },
-    {
-      src: "/api/placeholder/800/500",
-      alt: "Training Session",
-      caption: "Technical Training Programs",
-      description: "Keeping members updated with latest tax regulations"
     }
   ];
 
