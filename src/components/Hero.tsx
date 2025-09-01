@@ -12,7 +12,9 @@ const Hero = () => {
     >
       {/* Background Layer */}
       <div className="absolute inset-0">
-        <BackgroundBeamsWithCollision />
+        <BackgroundBeamsWithCollision>
+          <div></div>
+        </BackgroundBeamsWithCollision>
 
         {/* Custom Grid Background */}
         {/* Custom Grid Background */}
